@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Restuarent</title>
+</head>
+<body>
+    <form method="POST"> {% csrf_token %}
+        <label for="id1"> Food items : </label>
+        <input id="id1" name='item' placeholder="search food" required>
+        <button>submit</button>
+        
+    </form>
+    {% if res %}
+    <h2>Your Food item is </h2>
+    <h3> Item  :  {{ res2.name }}</h3>
+    <h3> Price :  {{ res2.price }}</h3>
+    <h3> Quantity : {{ res2.Quantity }}</h3>
+    {% endif %}
+</body>
+</html>

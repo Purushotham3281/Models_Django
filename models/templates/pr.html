@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+        <tr>
+            <td>Food</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+    {% for i in res %}
+    <tr>
+        <td>{{ i.name }}</td>
+        <td>{{ i.price }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+
+
+    <form method="POST"> {% csrf_token %}
+    <label for="id1"></label>
+    <input type="text" name="food" id="id1" placeholder="enter food" required >
+    <label for="id2"></label>
+    <input type="number" name="price" id="id2" placeholder="enter price" required >
+    <button>submit</button>
+    </form>
+</body>
+</html>

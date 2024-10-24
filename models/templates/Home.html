@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Restuarent Menu</h1>
+    <table border="1">
+    <thead><tr><td>Name<td>Price</td><td>Quantity</td></tr></thead>
+        {% for item in result %}
+        <h4><tr><td>{{ item.name }}</td> <td>{{ item.price }}</td> <td>{{ item.Quantity }}</td></tr></h4>
+
+    {% endfor %}
+    </table>
+</body>
+</html>
